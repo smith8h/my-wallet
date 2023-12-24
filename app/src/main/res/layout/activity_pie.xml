@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/background">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="24dp"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:background="@drawable/check"
+             android:gravity="center_vertical"
+             android:padding="24dp"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="8dp"
+                     android:alpha=".75"
+                     android:textSize="16sp"
+                     android:textColor="@color/text"
+                     android:textStyle="bold"
+                     android:text="Last Balance" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="20sp"
+                     android:textColor="@color/accent"
+                     android:id="@+id/last_balance"
+                     android:textStyle="bold"
+                     android:text="657,000 IQD" />
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="45dp"
+                 android:layout_width="45dp"
+                 android:src="@drawable/save"
+                 android:scaleType="centerInside"
+                 android:onClick="update"
+                 android:tint="@color/accent" />
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/in"
+             android:padding="24dp"
+             android:orientation="horizontal"
+             android:id="@+id/profit_container">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="8dp"
+                     android:alpha=".75"
+                     android:textSize="16sp"
+                     android:textColor="@color/text"
+                     android:textStyle="bold"
+                     android:text="Portfolio" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="20sp"
+                     android:textColor="@color/green"
+                     android:id="@+id/profit"
+                     android:textStyle="bold"
+                     android:text="657,000 IQD" />
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="45dp"
+                 android:layout_width="45dp"
+                 android:src="@drawable/increase"
+                 android:scaleType="centerInside"
+                 android:tint="@color/green"
+                 android:id="@+id/profit_icon" />
+        </LinearLayout>
+
+        <TextView
+             android:layout_marginBottom="20dp"
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:background="@drawable/edittext"
+             android:padding="20dp"
+             android:textSize="14sp"
+             android:textColor="@color/hint"
+             android:id="@+id/last_update"
+             android:text="Last operation at 25.2.2023" />
+        
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/in"
+             android:padding="24dp"
+             android:orientation="horizontal" >
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="8dp"
+                     android:alpha=".75"
+                     android:textSize="16sp"
+                     android:textColor="@color/text"
+                     android:textStyle="bold"
+                     android:text="Total Income" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="20sp"
+                     android:textColor="@color/green"
+                     android:id="@+id/in"
+                     android:textStyle="bold"
+                     android:text="657,000 IQD" />
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="45dp"
+                 android:layout_width="45dp"
+                 android:src="@drawable/arrow"
+                 android:rotation="180"
+                 android:scaleType="centerInside"
+                 android:tint="@color/green" />
+        </LinearLayout>
+        
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/debt"
+             android:padding="24dp"
+             android:orientation="horizontal" >
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="8dp"
+                     android:alpha=".75"
+                     android:textSize="16sp"
+                     android:textColor="@color/text"
+                     android:textStyle="bold"
+                     android:text="Total Debts (On The Way)" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="20sp"
+                     android:textColor="@color/yellow"
+                     android:id="@+id/debt"
+                     android:textStyle="bold"
+                     android:text="657,000 IQD" />
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="45dp"
+                 android:layout_width="45dp"
+                 android:src="@drawable/stay"
+                 android:scaleType="centerInside"
+                 android:tint="@color/yellow" />
+        </LinearLayout>
+        
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="20dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/out"
+             android:padding="24dp"
+             android:orientation="horizontal" >
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="8dp"
+                     android:alpha=".75"
+                     android:textSize="16sp"
+                     android:textColor="@color/text"
+                     android:textStyle="bold"
+                     android:text="Total Outcome" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="20sp"
+                     android:textColor="@color/red"
+                     android:id="@+id/out"
+                     android:textStyle="bold"
+                     android:text="657,000 IQD" />
+            </LinearLayout>
+
+            <ImageView
+                 android:layout_height="45dp"
+                 android:layout_width="45dp"
+                 android:src="@drawable/arrow"
+                 android:scaleType="centerInside"
+                 android:tint="@color/red" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

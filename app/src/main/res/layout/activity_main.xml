@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/background"
+     android:gravity="center_horizontal"
+     android:padding="24dp"
+     android:orientation="vertical"
+     tools:context=".MainActivity">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginEnd="10dp"
+             android:textSize="18sp"
+             android:textColor="@color/text"
+             android:layout_marginStart="10dp"
+             android:layout_weight="1"
+             android:textStyle="bold"
+             android:text="@string/app_name" />
+             
+        <ImageView 
+             android:layout_height="34dp"
+             android:layout_width="34dp"
+             android:layout_marginEnd="20dp"
+             android:scaleType="centerInside"
+             android:src="@drawable/eye_hide"
+             android:id="@+id/hide"
+             android:onClick="hide"
+             android:tint="@color/text"
+             android:tooltipText="Hide/Show Balance" />
+
+        <ImageView
+             android:layout_height="34dp"
+             android:layout_width="34dp"
+             android:scaleType="centerInside"
+             android:src="@drawable/pie"
+             android:id="@+id/pie"
+             android:onClick="pie"
+             android:tint="@color/text"
+             android:tooltipText="View History/Stats" />
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginVertical="55dp"
+         android:gravity="center"
+         android:orientation="vertical"
+         android:paddingHorizontal="50dp">
+
+        <me.grantland.widget.AutofitTextView
+             android:layout_height="90dp"
+             android:layout_width="match_parent"
+             android:gravity="center"
+             app:minTextSize="18sp"
+             android:textSize="40sp"
+             android:textColor="@color/text"
+             android:singleLine="true"
+             android:maxLines="1"
+             android:id="@+id/balance"
+             android:textStyle="bold"
+             android:text="0" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:alpha=".75"
+             android:onClick="currency"
+             android:textSize="14sp"
+             android:textColor="@color/text"
+             android:text="IQD"
+             android:id="@+id/currency" />
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginBottom="20dp"
+         android:orientation="horizontal">
+
+        <ImageView
+             android:layout_height="58dp"
+             android:layout_width="58dp"
+             android:scaleType="centerInside"
+             android:src="@drawable/arrow"
+             android:background="@drawable/in"
+             android:rotation="180"
+             android:padding="12dp"
+             android:onClick="add"
+             android:tint="@color/green"
+             android:id="@+id/in" />
+
+        <ImageView
+             android:layout_height="58dp"
+             android:layout_width="58dp"
+             android:layout_marginEnd="50dp"
+             android:scaleType="centerInside"
+             android:src="@drawable/stay"
+             android:background="@drawable/debt"
+             android:padding="12dp"
+             android:onClick="add"
+             android:tint="@color/yellow"
+             android:layout_marginStart="50dp"
+             android:id="@+id/debt" />
+
+        <ImageView
+             android:layout_height="58dp"
+             android:layout_width="58dp"
+             android:scaleType="centerInside"
+             android:src="@drawable/arrow"
+             android:background="@drawable/out"
+             android:padding="12dp"
+             android:onClick="add"
+             android:tint="@color/red"
+             android:id="@+id/out" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:id="@+id/rv" />
+</LinearLayout>
